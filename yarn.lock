@@ -5,6 +5,13 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@types/prettier@npm:^2":
+  version: 2.4.4
+  resolution: "@types/prettier@npm:2.4.4"
+  checksum: 2c2cc57efd49c7d8907415a72f96c84a6dd8696dd3bf8aa4ca3a667427bebf71cbfbc912673624bdfc935d272d1c008c639cf155f6449315990a4dc110f0d216
+  languageName: node
+  linkType: hard
+
 "ansi-styles@npm:^3.2.1":
   version: 3.2.1
   resolution: "ansi-styles@npm:3.2.1"
@@ -124,8 +131,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "edbo@workspace:."
   dependencies:
+    "@types/prettier": ^2
     cross-env: ^7.0.3
     npm-run-all: ^4.1.5
+    prettier: ^2.6.0
   languageName: unknown
   linkType: soft
 
@@ -548,6 +557,15 @@ __metadata:
   version: 3.0.0
   resolution: "pify@npm:3.0.0"
   checksum: 6cdcbc3567d5c412450c53261a3f10991665d660961e06605decf4544a61a97a54fefe70a68d5c37080ff9d6f4cf51444c90198d1ba9f9309a6c0d6e9f5c4fde
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "prettier@npm:2.6.0"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 3e527ad62279676778a8404d18174d7ca2365ada4caba6eebbcdd9907d1187afd3bc6ade5b4e5f5d4549bb9fb71e45ca8930d71500017635524f8fc05bc52e93
   languageName: node
   linkType: hard
 
