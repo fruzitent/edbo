@@ -6,6 +6,8 @@
   "description": "vstup.edbo.gov.ua parser",
   "devDependencies": {
     "@types/prettier": "^2",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "prettier": "^2.6.0"
   },
   "license": "MIT",
@@ -17,6 +19,8 @@
     "url": "https://github.com/fruzitent/edbo"
   },
   "scripts": {
+    "pre-commit": "lint-staged -v",
+    "prepare": "husky install",
     "pretty": "prettier -u -w ."
   }
 }
