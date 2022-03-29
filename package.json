@@ -1,14 +1,17 @@
 {
   "dependencies": {
+    "@types/node": "^17.0.21",
     "cross-env": "^7.0.3",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.6.2"
   },
   "description": "vstup.edbo.gov.ua parser",
   "devDependencies": {
     "@types/prettier": "^2",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
-    "prettier": "^2.6.0"
+    "prettier": "^2.6.0",
+    "typescript-coverage-report": "^0.6.4"
   },
   "license": "MIT",
   "name": "edbo",
@@ -19,8 +22,11 @@
     "url": "https://github.com/fruzitent/edbo"
   },
   "scripts": {
+    "coverage": "run tsc:cov",
     "pre-commit": "lint-staged -v",
     "prepare": "husky install",
-    "pretty": "prettier -u -w ."
+    "pretty": "prettier -u -w .",
+    "tsc": "tsc",
+    "tsc:cov": "typescript-coverage-report --strict"
   }
 }

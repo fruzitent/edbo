@@ -3,6 +3,8 @@
 .vercel
 
 .yarn
-
 .pnp.cjs
 .pnp.loader.mjs
+
+coverage-ts
+*.tsbuildinfo

@@ -1,0 +1,45 @@
+name: build
+
+on:
+  push:
+
+jobs:
+  coverage:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node: [17]
+        os: [ubuntu-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          cache: yarn
+          node-version: ${{ matrix.node }}
+
+      - run: yarn install --immutable --inline-builds
+
+      - run: yarn tsc:cov
+
+  tsc:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node: [17]
+        os: [ubuntu-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          cache: yarn
+          node-version: ${{ matrix.node }}
+
+      - run: yarn install --immutable --inline-builds
+
+      - run: yarn tsc
