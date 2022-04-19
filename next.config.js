@@ -3,8 +3,10 @@ const path = require('path')
 const withBundleAnalyzer = require('@next/bundle-analyzer')
 const withMDX = require('@next/mdx')
 const { withPlugins } = require('next-compose-plugins')
+const withPWA = require('next-pwa')
+const runtimeCaching = require('next-pwa/cache')
 
-const { isIgnoreBuildErrors, isAnalyze } = require('./src/config/node')
+const { isIgnoreBuildErrors, isAnalyze, isDev } = require('./src/config/node')
 
 const headers = [
   // { key: 'Content-Security-Policy', value: 'default-src "self"' },
@@ -22,6 +24,7 @@ const headers = [
 
 const plugins = [
   [withBundleAnalyzer({ enabled: isAnalyze })],
+  [withPWA],
   [withMDX({ options: { providerImportSource: '@mdx-js/react' } })],
 ]
 
@@ -49,6 +52,13 @@ const nextConfig = {
     'page.tsx',
   ],
   poweredByHeader: false,
+  pwa: {
+    buildExcludes: [],
+    dest: 'public',
+    disable: isDev,
+    mode: 'production',
+    runtimeCaching,
+  },
   reactStrictMode: true,
   swcMinify: true,
   typescript: { ignoreBuildErrors: isIgnoreBuildErrors },

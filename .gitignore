@@ -18,3 +18,9 @@ coverage-ts
 nginx/*.crt
 nginx/*.key
 nginx/*.pem
+
+public/sw*.js
+public/sw*.map
+public/workbox*.js
+public/workbox*.map
+public/worker*.js

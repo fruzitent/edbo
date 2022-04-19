@@ -9,3 +9,9 @@
 coverage-jest
 coverage-ts
 *.tsbuildinfo
+
+public/sw*.js
+public/sw*.map
+public/workbox*.js
+public/workbox*.map
+public/worker*.js

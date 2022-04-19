@@ -2,7 +2,7 @@
   "background_color": "#FFF",
   "description": "vstup.edbo.gov.ua parser",
   "display": "minimal-ui",
-  "icons": [{ "sizes": "32x32", "src": "favicon.ico" }],
+  "icons": [{ "sizes": "256x256", "src": "favicon.ico", "type": "image/png" }],
   "id": "@fruzitent/edbo",
   "name": "edbo",
   "orientation": "portrait",

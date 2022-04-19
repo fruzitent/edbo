@@ -19,7 +19,8 @@
     "noImplicitAny": true,
     "paths": {
       "public/*": ["public/*"],
-      "src/*": ["src/*"]
+      "src/*": ["src/*"],
+      "worker/*": ["worker/*"]
     },
     "plugins": [],
     "preserveWatchOutput": true,
@@ -30,6 +31,6 @@
     "useDefineForClassFields": true
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "src/**/*"],
+  "include": ["next-env.d.ts", "src/**/*", "worker/**/*"],
   "typeAcquisition": { "enable": true }
 }
