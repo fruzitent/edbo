@@ -1674,7 +1674,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/mdx@npm:^12.1.4":
+"@next/mdx@npm:^12.1.5":
   version: 12.1.5
   resolution: "@next/mdx@npm:12.1.5"
   peerDependencies:
@@ -2163,7 +2163,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:*, @types/eslint@npm:^8":
+"@types/eslint@npm:*, @types/eslint@npm:^8.4.1":
   version: 8.4.1
   resolution: "@types/eslint@npm:8.4.1"
   dependencies:
@@ -2357,14 +2357,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^17.0.21":
+"@types/node@npm:*, @types/node@npm:^17.0.25":
   version: 17.0.25
   resolution: "@types/node@npm:17.0.25"
   checksum: 6a820bd624e69ea772f52a6cdb326484eff5829443dc981939373929ade109f58c21698b9f0a831bd6ceea799e722a75dc49c5fa7a6bc32a81e1cbdfc6507b64
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2, @types/prettier@npm:^2.1.5":
+"@types/prettier@npm:^2.1.5, @types/prettier@npm:^2.6.0":
   version: 2.6.0
   resolution: "@types/prettier@npm:2.6.0"
   checksum: 946f1f82ce6f31664e023a5d65931c31b7d677b454f528f67dce851d72e7fcfe713076f4251b16c3646eecf1545f5f5b909b4962966341ed9ddf5b80113b3674
@@ -2401,7 +2401,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:>=16":
+"@types/react@npm:*, @types/react@npm:>=16, @types/react@npm:^18.0.5":
   version: 18.0.5
   resolution: "@types/react@npm:18.0.5"
   dependencies:
@@ -2409,17 +2409,6 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: 70d3336d43ef25509fa89ef3278f57fdf1945fc921e69b7890a78ab9a52a55ee38e2f13aa71eb4f6032b7311e7557860ce8836c1acf3028304989571c9736a96
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:^17.0.43":
-  version: 17.0.44
-  resolution: "@types/react@npm:17.0.44"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: ebee02778ca08f954c316dc907802264e0121c87b8fa2e7e0156ab0ef2a1b0a09d968c016a3600ec4c9a17dc09b4274f292d9b15a1a5369bb7e4072def82808f
   languageName: node
   linkType: hard
 
@@ -2449,7 +2438,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/sharp@npm:^0":
+"@types/sharp@npm:^0.30.2":
   version: 0.30.2
   resolution: "@types/sharp@npm:0.30.2"
   dependencies:
@@ -4329,41 +4318,41 @@ __metadata:
     "@jest/types": ^27.5.1
     "@mdx-js/loader": ^2.1.1
     "@next/bundle-analyzer": ^12.1.5
-    "@next/mdx": ^12.1.4
+    "@next/mdx": ^12.1.5
     "@shopify/react-compose": ^2.1.12
     "@testing-library/jest-dom": ^5.16.4
     "@testing-library/react": ^13.1.1
     "@testing-library/react-hooks": ^8.0.0
     "@testing-library/user-event": ^14.1.1
-    "@types/eslint": ^8
+    "@types/eslint": ^8.4.1
     "@types/jest": ^27.4.1
-    "@types/node": ^17.0.21
-    "@types/prettier": ^2
-    "@types/react": ^17.0.43
-    "@types/sharp": ^0
+    "@types/node": ^17.0.25
+    "@types/prettier": ^2.6.0
+    "@types/react": ^18.0.5
+    "@types/sharp": ^0.30.2
     "@types/testing-library__jest-dom": ^5.14.3
     babel-loader: ^8.2.4
     cross-env: ^7.0.3
-    eslint: ^8.12.0
-    eslint-config-next: ^12.1.4
+    eslint: ^8.13.0
+    eslint-config-next: ^12.1.5
     eslint-config-prettier: ^8.5.0
     eslint-plugin-testing-library: ^5.3.1
     husky: ^7.0.4
     jest: ^27.5.1
     jest-extended: ^2.0.0
-    lint-staged: ^12.3.7
-    next: ^12.1.4
+    lint-staged: ^12.3.8
+    next: ^12.1.5
     next-compose-plugins: ^2.2.1
     next-i18next: ^11.0.0
     next-page-tester: ^0.31.0
     next-pwa: ^5.5.2
     npm-run-all: ^4.1.5
-    prettier: ^2.6.0
+    prettier: ^2.6.2
     react: ^18.0.0
     react-dom: ^18.0.0
-    sass: ^1.49.11
-    sharp: ^0.30.3
-    typescript: ^4.6.2
+    sass: ^1.50.1
+    sharp: ^0.30.4
+    typescript: ^4.6.3
     typescript-coverage-report: ^0.6.4
   languageName: unknown
   linkType: soft
@@ -4567,7 +4556,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:^12.1.4":
+"eslint-config-next@npm:^12.1.5":
   version: 12.1.5
   resolution: "eslint-config-next@npm:12.1.5"
   dependencies:
@@ -4782,7 +4771,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.12.0":
+"eslint@npm:^8.13.0":
   version: 8.13.0
   resolution: "eslint@npm:8.13.0"
   dependencies:
@@ -6976,7 +6965,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^12.3.7":
+"lint-staged@npm:^12.3.8":
   version: 12.3.8
   resolution: "lint-staged@npm:12.3.8"
   dependencies:
@@ -8037,7 +8026,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^12.1.4":
+"next@npm:^12.1.5":
   version: 12.1.5
   resolution: "next@npm:12.1.5"
   dependencies:
@@ -8759,7 +8748,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.6.0":
+"prettier@npm:^2.6.2":
   version: 2.6.2
   resolution: "prettier@npm:2.6.2"
   bin:
@@ -9396,7 +9385,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.49.11":
+"sass@npm:^1.50.1":
   version: 1.50.1
   resolution: "sass@npm:1.50.1"
   dependencies:
@@ -9551,7 +9540,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.30.3":
+"sharp@npm:^0.30.4":
   version: 0.30.4
   resolution: "sharp@npm:0.30.4"
   dependencies:
@@ -10549,7 +10538,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:*, typescript@npm:^4.6.2":
+"typescript@npm:*, typescript@npm:^4.6.3":
   version: 4.6.3
   resolution: "typescript@npm:4.6.3"
   bin:
@@ -10559,7 +10548,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@*#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@*#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.3#~builtin<compat/typescript>":
   version: 4.6.3
   resolution: "typescript@patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=bda367"
   bin:
