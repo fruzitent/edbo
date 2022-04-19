@@ -1,10 +1,20 @@
 {
   "dependencies": {
+    "@mdx-js/loader": "^2.1.1",
+    "@next/bundle-analyzer": "^12.1.5",
+    "@next/mdx": "^12.1.4",
+    "@shopify/react-compose": "^2.1.12",
     "@types/node": "^17.0.21",
+    "@types/react": "^17.0.43",
+    "@types/sharp": "^0",
     "cross-env": "^7.0.3",
     "next": "^12.1.4",
     "next-compose-plugins": "^2.2.1",
     "npm-run-all": "^4.1.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "sass": "^1.49.11",
+    "sharp": "^0.30.3",
     "typescript": "^4.6.2"
   },
   "description": "vstup.edbo.gov.ua parser",
@@ -12,6 +22,7 @@
     "@types/eslint": "^8",
     "@types/prettier": "^2",
     "eslint": "^8.12.0",
+    "eslint-config-next": "^12.1.4",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
@@ -27,11 +38,18 @@
     "url": "https://github.com/fruzitent/edbo"
   },
   "scripts": {
+    "build": "next build",
+    "build:analyze": "cross-env ANALYZE=true run build",
+    "build:debug": "run build --debug",
+    "build:profile": "run build --profile",
+    "ci": "run-s pretty build tsc:cov",
     "coverage": "run tsc:cov",
-    "lint": "eslint --fix .",
+    "dev": "cross-env NODE_OPTIONS='$NODE_OPTIONS --inspect' next dev",
+    "lint": "next lint --fix",
     "pre-commit": "lint-staged -v",
     "prepare": "husky install",
     "pretty": "prettier -u -w .",
+    "start": "next start",
     "tsc": "tsc",
     "tsc:cov": "typescript-coverage-report --strict"
   }

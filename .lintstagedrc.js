@@ -1,7 +1,13 @@
-const lint = 'eslint --fix'
+const path = require('path')
+
+const lint = (filenames) =>
+  `next lint --fix --file ${filenames
+    .map((file) => path.relative(process.cwd(), file))
+    .join(' --file ')}`
+
 const pretty = 'prettier -u -w'
 
 module.exports = {
   '**/*': [pretty],
-  '**/*.{js,ts}': [lint],
+  '**/*.{js,jsx,ts,tsx}': [lint],
 }
