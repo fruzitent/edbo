@@ -14,3 +14,7 @@ coverage-ts
 *.tsbuildinfo
 
 .env*.local
+
+nginx/*.crt
+nginx/*.key
+nginx/*.pem

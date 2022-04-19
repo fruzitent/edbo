@@ -65,6 +65,10 @@
     "pre-commit": "lint-staged -v",
     "prepare": "husky install",
     "pretty": "prettier -u -w .",
+    "ssl": "run-p ssl:req ssl:dh",
+    "ssl:dh": "cd nginx && openssl dhparam -out dhparam.pem 4096",
+    "ssl:rand": "openssl rand -base64 32",
+    "ssl:req": "cd nginx && openssl req -x509 -nodes -days 365 -newkey rsa:4096 -keyout cert.key -out cert.crt",
     "start": "next start",
     "tsc": "tsc",
     "tsc:cov": "typescript-coverage-report --strict"

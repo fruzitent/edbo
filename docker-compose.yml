@@ -5,6 +5,16 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    ports:
-      - '3000:3000'
     restart: unless-stopped
+
+  nginx:
+    command: nginx
+    depends_on:
+      - nextjs
+    image: nginx:alpine
+    ports:
+      - '80:80'
+      - '443:443'
+    restart: unless-stopped
+    volumes:
+      - ./nginx:/etc/nginx:ro
