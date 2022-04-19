@@ -24,6 +24,8 @@ jobs:
 
       - run: yarn tsc:cov
 
+      - run: yarn jest:cov
+
   nextjs:
     runs-on: ${{ matrix.os }}
 

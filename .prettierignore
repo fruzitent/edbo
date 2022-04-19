@@ -6,5 +6,6 @@
 .pnp.cjs
 .pnp.loader.mjs
 
+coverage-jest
 coverage-ts
 *.tsbuildinfo
