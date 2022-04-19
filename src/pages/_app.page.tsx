@@ -1,4 +1,5 @@
 import compose from '@shopify/react-compose'
+import { appWithTranslation } from 'next-i18next'
 import Head from 'next/head'
 
 import './_app.scss'
@@ -22,4 +23,4 @@ const App = (props: AppProps) => {
   )
 }
 
-export default compose()(App)
+export default compose(appWithTranslation)(App)
