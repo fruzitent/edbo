@@ -2,6 +2,8 @@ import compose from '@shopify/react-compose'
 import { appWithTranslation } from 'next-i18next'
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
+import { ServicesContextProvider } from 'src/services'
+import { StoresContextProvider } from 'src/stores'
 
 import './_app.scss'
 
@@ -26,13 +28,17 @@ const App = (props: AppProps) => {
         />
       </Head>
 
-      <ThemeProvider
-        defaultTheme={'system'}
-        disableTransitionOnChange
-        forcedTheme={Component.theme || null}
-      >
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <ServicesContextProvider>
+        <StoresContextProvider>
+          <ThemeProvider
+            defaultTheme={'system'}
+            disableTransitionOnChange
+            forcedTheme={Component.theme || null}
+          >
+            <Component {...pageProps} />
+          </ThemeProvider>
+        </StoresContextProvider>
+      </ServicesContextProvider>
     </>
   )
 }
