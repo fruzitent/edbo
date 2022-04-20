@@ -18,8 +18,9 @@ COPY --from=deps ./app                   ./
 COPY             ./public                ./public
 COPY             ./src                   ./src
 COPY             .env                    ./
-COPY             next-env.d.ts           ./
 COPY             next.config.js          ./
+COPY             next-env.d.ts           ./
+COPY             next-i18next.config.js  ./
 COPY             tsconfig.json           ./
 
 #RUN yarn build
