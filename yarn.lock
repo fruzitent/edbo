@@ -1591,12 +1591,12 @@ __metadata:
   linkType: hard
 
 "@jridgewell/trace-mapping@npm:^0.3.0":
-  version: 0.3.4
-  resolution: "@jridgewell/trace-mapping@npm:0.3.4"
+  version: 0.3.8
+  resolution: "@jridgewell/trace-mapping@npm:0.3.8"
   dependencies:
     "@jridgewell/resolve-uri": ^3.0.3
     "@jridgewell/sourcemap-codec": ^1.4.10
-  checksum: ab8bce84bbbc8c34f3ba8325ed926f8f2d3098983c10442a80c55764c4eb6e47d5b92d8ff20a0dd868c3e76a3535651fd8a0138182c290dbfc8396195685c37b
+  checksum: 4b46f28c785133773de521677983186dfe7ed80872bee57b73624527e345954139ea45dfb7551a5f04de1773dc9501b896554a8f1c9e1c44ab2146a3c66b6fda
   languageName: node
   linkType: hard
 
@@ -3150,10 +3150,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async@npm:0.9.x":
-  version: 0.9.2
-  resolution: "async@npm:0.9.2"
-  checksum: 87dbf129292b8a6c32a4e07f43f462498162aa86f404a7e11f978dbfdf75cfb163c26833684bb07b9d436083cd604cbbf730a57bfcbe436c6ae1ed266cdc56bb
+"async@npm:^3.2.3":
+  version: 3.2.3
+  resolution: "async@npm:3.2.3"
+  checksum: c4bee57ab2249af3dc83ca3ef9acfa8e822c0d5e5aa41bae3eaf7f673648343cd64ecd7d26091ffd357f3f044428b17b5f00098494b6cf8b6b3e9681f0636ca1
   languageName: node
   linkType: hard
 
@@ -3916,26 +3916,26 @@ __metadata:
   linkType: hard
 
 "core-js-compat@npm:^3.20.2, core-js-compat@npm:^3.21.0":
-  version: 3.22.0
-  resolution: "core-js-compat@npm:3.22.0"
+  version: 3.22.1
+  resolution: "core-js-compat@npm:3.22.1"
   dependencies:
     browserslist: ^4.20.2
     semver: 7.0.0
-  checksum: ad204cfbe203803d2d86f7bb95f60525b1f9e3701b92d68d08e575932a5d8ea2ec31e121350a328a4035d8f0ef8793392efd74b1fede2702c26c80865b49597c
+  checksum: 2f9f885ea006fed7717279e36e644734aea722f0d8e06e272636c030eb2efcf1bab1471fa82e8ef89a39d60e0257a3f24573a014c334dc5b6f2085da90221c98
   languageName: node
   linkType: hard
 
 "core-js-pure@npm:^3.20.2":
-  version: 3.22.0
-  resolution: "core-js-pure@npm:3.22.0"
-  checksum: 8c1fc4aa8b0f1e9cdd6f14548324ae8dd4083e56a4a8e414d9ab9ea42ba1680170212bb2276e7a0b7973d755a5c8bdac506e6e19685bd17922440bc490da4149
+  version: 3.22.1
+  resolution: "core-js-pure@npm:3.22.1"
+  checksum: 404690f35703fb2db4c3e55030af9e2c0214b76f5bf975f69a632ca8103176862435a2b6b8dd2d3f60d8702131a4d762a8bdaa609331700a1bb894a94c84d6ab
   languageName: node
   linkType: hard
 
 "core-js@npm:^3":
-  version: 3.22.0
-  resolution: "core-js@npm:3.22.0"
-  checksum: 88ac28dfb8e7fdcd80d32a69dc634900e3daf3bc873ebefb6f189b598ce96e9b68fe553428627e5c43f27749779389faceb865a2a120cf2d44f05795830b5cd7
+  version: 3.22.1
+  resolution: "core-js@npm:3.22.1"
+  checksum: 04f5e97b069e8d9137cd72151d8f4e6b0e51e338c1e9fa04da1a582695bb5b789abf96b0b2bb3d716c63ca68c0e67eea6680d8ee0a206e93e97ebba8aaf40e9c
   languageName: node
   linkType: hard
 
@@ -4346,6 +4346,7 @@ __metadata:
     next-i18next: ^11.0.0
     next-page-tester: ^0.31.0
     next-pwa: ^5.5.2
+    next-themes: ^0.1.1
     npm-run-all: ^4.1.5
     prettier: ^2.6.2
     react: ^18.0.0
@@ -4358,20 +4359,20 @@ __metadata:
   linkType: soft
 
 "ejs@npm:^3.1.6":
-  version: 3.1.6
-  resolution: "ejs@npm:3.1.6"
+  version: 3.1.7
+  resolution: "ejs@npm:3.1.7"
   dependencies:
-    jake: ^10.6.1
+    jake: ^10.8.5
   bin:
-    ejs: ./bin/cli.js
-  checksum: 81a9cdea0b4ded3b5a4b212b7c17e20bb07468f08394e2d519708d367957a70aef3d282a6d5d38bf6ad313ba25802b9193d4227f29b084d2ee0f28d115141d48
+    ejs: bin/cli.js
+  checksum: fe40764af39955ce8f8b116716fc8b911959946698edb49ecab85df597746c07aa65d5b74ead28a1e2ffa75b0f92d9bedd752f1c29437da6137b3518271e988c
   languageName: node
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.84":
-  version: 1.4.113
-  resolution: "electron-to-chromium@npm:1.4.113"
-  checksum: ce3ef4090a8088f399bc8c3443248711c82edbcc0c91f4c63d0f6bdc557ca12cb08e9e1e89743be9f48563cf701d6863c62c8250e4a5f297aa614c0c26da46ea
+  version: 1.4.114
+  resolution: "electron-to-chromium@npm:1.4.114"
+  checksum: be44dad2a6433740fdfb14ea95ccd4806b21cb8809e26617108e6796441adc1046b934f193c364250b5956fb0863c2b1805328338e75a3df02a7ea993a47a17d
   languageName: node
   linkType: hard
 
@@ -5053,11 +5054,11 @@ __metadata:
   linkType: hard
 
 "filelist@npm:^1.0.1":
-  version: 1.0.2
-  resolution: "filelist@npm:1.0.2"
+  version: 1.0.3
+  resolution: "filelist@npm:1.0.3"
   dependencies:
-    minimatch: ^3.0.4
-  checksum: 4d6953cb6f76c5345a52fc50222949e244946f485462ab6bae977176fff64fe5200cc1f44db175c27fc887f91cead401504c22eefcdcc064012ee44759947561
+    minimatch: ^5.0.1
+  checksum: c78048691a31b91d54908ce2eac4731bf108613c7b2e4d1a05a6cbe6739bd067e4c1a3baa4f7d07b7143b8c374c0c0d59864b5c8d9168ec8e2a85f84fb7170ad
   languageName: node
   linkType: hard
 
@@ -5211,9 +5212,9 @@ __metadata:
   linkType: hard
 
 "functions-have-names@npm:^1.2.2":
-  version: 1.2.2
-  resolution: "functions-have-names@npm:1.2.2"
-  checksum: 25f44b6d1c41ac86ffdf41f25d1de81c0a5b4a3fcf4307a33cdfb23b9d4bd5d0d8bf312eaef5ad368c6500c8a9e19f692b8ce9f96aaab99db9dd936554165558
+  version: 1.2.3
+  resolution: "functions-have-names@npm:1.2.3"
+  checksum: c3f1f5ba20f4e962efb71344ce0a40722163e85bee2101ce25f88214e78182d2d2476aa85ef37950c579eb6cf6ee811c17b3101bb84004bb75655f3e33f3fdb5
   languageName: node
   linkType: hard
 
@@ -5446,9 +5447,9 @@ __metadata:
   linkType: hard
 
 "has-bigints@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "has-bigints@npm:1.0.1"
-  checksum: 44ab55868174470065d2e0f8f6def1c990d12b82162a8803c679699fa8a39f966e336f2a33c185092fe8aea7e8bf2e85f1c26add5f29d98f2318bd270096b183
+  version: 1.0.2
+  resolution: "has-bigints@npm:1.0.2"
+  checksum: 390e31e7be7e5c6fe68b81babb73dfc35d413604d7ee5f56da101417027a4b4ce6a27e46eff97ad040c835b5d228676eae99a9b5c3bc0e23c8e81a49241ff45b
   languageName: node
   linkType: hard
 
@@ -6181,17 +6182,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jake@npm:^10.6.1":
-  version: 10.8.4
-  resolution: "jake@npm:10.8.4"
+"jake@npm:^10.8.5":
+  version: 10.8.5
+  resolution: "jake@npm:10.8.5"
   dependencies:
-    async: 0.9.x
+    async: ^3.2.3
     chalk: ^4.0.2
     filelist: ^1.0.1
     minimatch: ^3.0.4
   bin:
     jake: ./bin/cli.js
-  checksum: ab411cfb852d04089b2d7e25cec232421a9d3656f58784954a93cdbef6ef190e445da9c5a1a24ce018ef7ed41a08191828ea367bd9d1b0bac31465b40feeaad6
+  checksum: 56c913ecf5a8d74325d0af9bc17a233bad50977438d44864d925bb6c45c946e0fee8c4c1f5fe2225471ef40df5222e943047982717ebff0d624770564d3c46ba
   languageName: node
   linkType: hard
 
@@ -6965,7 +6966,11 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "lint-staged@npm:^12.4.0":
+=======
+"lint-staged@npm:^12.3.8":
+>>>>>>> 438b5a2 (add themes)
   version: 12.4.0
   resolution: "lint-staged@npm:12.4.0"
   dependencies:
@@ -7772,7 +7777,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimatch@npm:3 || 4 || 5":
+"minimatch@npm:3 || 4 || 5, minimatch@npm:^5.0.1":
   version: 5.0.1
   resolution: "minimatch@npm:5.0.1"
   dependencies:
@@ -8026,6 +8031,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-themes@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "next-themes@npm:0.1.1"
+  peerDependencies:
+    next: ">=11.1.1"
+    react: "*"
+    react-dom: "*"
+  checksum: 226f6af92f3ccccd23c21cd0605aee4fef3482fb8442957a8bae220051af587b63b9fa0b1c8c1c859a7f60b7c8380ebcec98adb3575c903611251917846215e4
+  languageName: node
+  linkType: hard
+
 "next@npm:^12.1.5":
   version: 12.1.5
   resolution: "next@npm:12.1.5"
@@ -8098,11 +8114,11 @@ __metadata:
   linkType: hard
 
 "node-abi@npm:^3.3.0":
-  version: 3.8.0
-  resolution: "node-abi@npm:3.8.0"
+  version: 3.15.0
+  resolution: "node-abi@npm:3.15.0"
   dependencies:
     semver: ^7.3.5
-  checksum: 3644dd51f4f189358ef56055407501aa698632d67448585b38c46c81a482a0c3bfb06da513ac4060a12ce5f607f208ba9d9c8280f1c38329670b709bd735fcae
+  checksum: 8fb0374d11f4d02beaacfedf5e536006f0c5f4c479cd2ff6cfda39b0a8f1f9230dbac865f80e98f030dae5ae8e197806b8683547dad1b79af16246e32a441e24
   languageName: node
   linkType: hard
 
@@ -8712,8 +8728,8 @@ __metadata:
   linkType: hard
 
 "prebuild-install@npm:^7.0.1":
-  version: 7.0.1
-  resolution: "prebuild-install@npm:7.0.1"
+  version: 7.1.0
+  resolution: "prebuild-install@npm:7.1.0"
   dependencies:
     detect-libc: ^2.0.0
     expand-template: ^2.0.3
@@ -8730,7 +8746,7 @@ __metadata:
     tunnel-agent: ^0.6.0
   bin:
     prebuild-install: bin.js
-  checksum: 117c8966f221242633bbf245755fb469dabc7085909f5e3db83359d6281a88dedbdada7e839315805a192c74b7cce3ed1a86c1382a8d950c1ea60a9d5d8e7bf0
+  checksum: 204f2d89c6d6179fa1039036514aa72f7d0b537e421ef72c40840286e318f41489f00f22c6acc725cce6e10d43825b69dcabeaadfc917db781c58cd56fc25f90
   languageName: node
   linkType: hard
 

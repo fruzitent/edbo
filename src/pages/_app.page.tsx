@@ -1,12 +1,19 @@
 import compose from '@shopify/react-compose'
 import { appWithTranslation } from 'next-i18next'
+import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
 
 import './_app.scss'
 
-import type { AppProps } from 'next/app'
+import type { AppProps as _AppProps } from 'next/app'
 
 export { reportWebVitals } from 'src/utils/reportWebVitals'
+
+type AppProps = _AppProps & {
+  Component: {
+    theme?: string
+  }
+}
 
 const App = (props: AppProps) => {
   const { Component, pageProps } = props
@@ -18,7 +25,14 @@ const App = (props: AppProps) => {
           name={'viewport'}
         />
       </Head>
-      <Component {...pageProps} />
+
+      <ThemeProvider
+        defaultTheme={'system'}
+        disableTransitionOnChange
+        forcedTheme={Component.theme || null}
+      >
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   )
 }
