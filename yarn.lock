@@ -2364,6 +2364,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/nprogress@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@types/nprogress@npm:0.2.0"
+  checksum: 561384775008ae58111f038f8f9468b3de8987cd753feef9bf6d07af0e1343390d492a078bb08a7b53ac7370208e31e06ac069cb852c435d49f5fe218e9769c4
+  languageName: node
+  linkType: hard
+
 "@types/pg@npm:^8":
   version: 8.6.5
   resolution: "@types/pg@npm:8.6.5"
@@ -4230,6 +4237,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"destyle.css@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "destyle.css@npm:3.0.2"
+  checksum: bf4c26d2f996476fb43a8b5f9144200ba421fd2f342da0e32ba5795e836c5cd78d799c56f71bf3989897f7247fbdca9d3d0e2d6b9d0e8187948e3c039af5b733
+  languageName: node
+  linkType: hard
+
 "detect-libc@npm:^2.0.0, detect-libc@npm:^2.0.1":
   version: 2.0.1
   resolution: "detect-libc@npm:2.0.1"
@@ -4345,6 +4359,7 @@ __metadata:
     "@types/eslint": ^8.4.1
     "@types/jest": ^27.4.1
     "@types/node": ^17.0.25
+    "@types/nprogress": ^0.2.0
     "@types/pg": ^8
     "@types/prettier": ^2.6.0
     "@types/react": ^18.0.5
@@ -4352,6 +4367,7 @@ __metadata:
     "@types/testing-library__jest-dom": ^5.14.3
     babel-loader: ^8.2.5
     cross-env: ^7.0.3
+    destyle.css: ^3.0.2
     eslint: ^8.13.0
     eslint-config-next: ^12.1.5
     eslint-config-prettier: ^8.5.0
@@ -4370,6 +4386,7 @@ __metadata:
     next-pwa: ^5.5.2
     next-themes: ^0.1.1
     npm-run-all: ^4.1.5
+    nprogress: ^0.2.0
     pg: ^8.7.3
     prettier: ^2.6.2
     react: ^18.0.0
@@ -8315,6 +8332,13 @@ __metadata:
     gauge: ^4.0.0
     set-blocking: ^2.0.0
   checksum: f1a4078a73ebc89896a832bbf869f491c32ecb12e0434b9a7499878ce8f29f22e72befe3c53cd8cdc9dbf4b4057297e783ab0b6746a8b067734de6205af4d538
+  languageName: node
+  linkType: hard
+
+"nprogress@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "nprogress@npm:0.2.0"
+  checksum: 66b7bec5d563ecf2d1c3d2815e6d5eb74ed815eee8563e0afa63d3f185ab1b9cf2ddd97e1ded263b9995c5019d26d600320e849e50f3747984daa033744619dc
   languageName: node
   linkType: hard
 
