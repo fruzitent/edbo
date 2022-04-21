@@ -4382,7 +4382,7 @@ __metadata:
     next: ^12.1.5
     next-compose-plugins: ^2.2.1
     next-i18next: ^11.0.0
-    next-page-tester: ^0.31.0
+    next-page-tester: ^0.32.0
     next-pwa: ^5.5.2
     next-themes: ^0.1.1
     npm-run-all: ^4.1.5
@@ -8062,9 +8062,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-page-tester@npm:^0.31.0":
-  version: 0.31.0
-  resolution: "next-page-tester@npm:0.31.0"
+"next-page-tester@npm:^0.32.0":
+  version: 0.32.0
+  resolution: "next-page-tester@npm:0.32.0"
   dependencies:
     "@types/express": ^4.17.13
     cookie: ^0.4.1
@@ -8076,10 +8076,10 @@ __metadata:
     stealthy-require: ^1.1.1
     tiny-glob: ^0.2.9
   peerDependencies:
-    next: ^12.1.0
+    next: ^12.1.1
     react: ^16.6.0 || ^17
     react-dom: ^16.6.0 || ^17
-  checksum: ca6104dd45430bea9f82067156aca89cf9cb9befdc48816ae269751497e36026763e896fd10f058a1976b08fa843de8e4bd6e7642ba53cadb934fa12397b0690
+  checksum: f011a399044bf0e052c207db4239e9d05a4144ed473f9e4e47d39b948265f582b407c5815bf2089ddc82dd4f73af20f2a0d7c7776ca7ea6ac9c745bfd0bb4f3c
   languageName: node
   linkType: hard
 
