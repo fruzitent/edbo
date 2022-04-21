@@ -6,10 +6,10 @@ import Head from 'next/head'
 import Router from 'next/router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
+
+import 'src/pages/_app.scss'
 import { ServicesContextProvider } from 'src/services'
 import { StoresContextProvider } from 'src/stores'
-
-import './_app.scss'
 
 import type { AppProps as _AppProps } from 'next/app'
 
