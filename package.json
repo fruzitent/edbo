@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@jest/globals": "^28.0.3",
     "@mdx-js/loader": "^2.1.1",
     "@next/bundle-analyzer": "^12.1.5",
     "@next/mdx": "^12.1.5",
@@ -47,6 +48,8 @@
     "eslint-plugin-testing-library": "^5.3.1",
     "husky": "^7.0.4",
     "jest": "^28.0.3",
+    "jest-environment-jsdom": "^28.0.2",
+    "jest-environment-node": "^28.0.2",
     "jest-extended": "^2.0.0",
     "lint-staged": "^12.4.1",
     "next-page-tester": "^0.32.0",
