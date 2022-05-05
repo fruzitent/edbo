@@ -42,7 +42,7 @@ const App = (props: AppProps) => {
           <ThemeProvider
             defaultTheme={'system'}
             disableTransitionOnChange
-            forcedTheme={Component.theme || null}
+            forcedTheme={Component.theme}
           >
             <Component {...pageProps} />
           </ThemeProvider>
