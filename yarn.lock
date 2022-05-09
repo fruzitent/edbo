@@ -4498,7 +4498,7 @@ __metadata:
     lint-staged: ^12.4.1
     mobx: ^6.5.0
     mobx-react-lite: ^3.4.0
-    mobx-state-tree: ^5.1.4
+    mobx-state-tree: ^5.1.5
     next: ^12.1.6
     next-compose-plugins: ^2.2.1
     next-i18next: ^11.0.0
@@ -8031,12 +8031,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mobx-state-tree@npm:^5.1.4":
-  version: 5.1.4
-  resolution: "mobx-state-tree@npm:5.1.4"
+"mobx-state-tree@npm:^5.1.5":
+  version: 5.1.5
+  resolution: "mobx-state-tree@npm:5.1.5"
   peerDependencies:
     mobx: ^6.3.0
-  checksum: 12f7d559d4a5ca51a84af59eae51d11c9bfbb98e2bdc1c04fb44ef7ac38fb4e2c2394e1cc9c0fb9c50686ea78effeb074d67853e92986ef201a9792ec9cc5370
+  checksum: 7d88e6018668e0fe21908301848a724810640d8271e287bc90cbe63f87172d8353dc9f7fb922899e0ba70efba290c6cc7166b90032c76b957faec42a4dd27923
   languageName: node
   linkType: hard
 
