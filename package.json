@@ -28,7 +28,7 @@
     "sass": "^1.52.2",
     "sharp": "^0.30.6",
     "sql-template-strings": "^2.2.2",
-    "typescript": "^4.7.2"
+    "typescript": "^4.7.3"
   },
   "description": "vstup.edbo.gov.ua parser",
   "devDependencies": {
