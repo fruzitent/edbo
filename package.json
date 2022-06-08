@@ -8,7 +8,7 @@
     "@types/nprogress": "^0.2.0",
     "@types/pg": "^8",
     "@types/react": "^18.0.12",
-    "@types/sharp": "^0.30.3",
+    "@types/sharp": "^0.30.4",
     "babel-loader": "^8.2.5",
     "cross-env": "^7.0.3",
     "destyle.css": "^3.0.2",
