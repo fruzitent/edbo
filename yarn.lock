@@ -1940,15 +1940,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shopify/react-compose@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@shopify/react-compose@npm:3.0.0"
+"@shopify/react-compose@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@shopify/react-compose@npm:3.0.1"
   dependencies:
     "@shopify/useful-types": ^5.0.0
     hoist-non-react-statics: ^3.0.1
   peerDependencies:
-    react: ">=16.8.0 <18.0.0"
-  checksum: 69a37d29851e7758a62cb59f990a1f86a1dc92c239abe9cd9b61e33ff942c362d0399bef6d1036216c767ee9827fe7af6c074b77c67cc265bc409595d77c39e8
+    react: ">=16.8.0 <19.0.0"
+  checksum: 198116565d11fce2824cd4bd02d2ee2c9af4d933ff6d98b9927e19e02ad03cc3be5f4a16499f1f61c53c77f40767e02e792a06acb6c94acfd4081386413ae575
   languageName: node
   linkType: hard
 
@@ -4477,7 +4477,7 @@ __metadata:
     "@mdx-js/loader": ^2.1.1
     "@next/bundle-analyzer": ^12.1.6
     "@next/mdx": ^12.1.6
-    "@shopify/react-compose": ^3.0.0
+    "@shopify/react-compose": ^3.0.1
     "@testing-library/jest-dom": ^5.16.4
     "@testing-library/react": ^13.3.0
     "@testing-library/react-hooks": ^8.0.0
