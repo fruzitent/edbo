@@ -1640,15 +1640,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/loader@npm:^2.1.1":
-  version: 2.1.1
-  resolution: "@mdx-js/loader@npm:2.1.1"
+"@mdx-js/loader@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "@mdx-js/loader@npm:2.1.2"
   dependencies:
     "@mdx-js/mdx": ^2.0.0
     source-map: ^0.7.0
   peerDependencies:
     webpack: ">=4"
-  checksum: 0834bc33e86d274a9ef55b8c5d3ad96c498779361f7daf4bc8f7e18ba3da6fbddf9ac0a2f4eb5854008daf8618932677bb4a8e0bb63dce8f09047324b917585e
+  checksum: 5fd8978b4835aa8bb94a1f9c3e753839001c8fb1cd2b1d4ed8f03dd17bc1c16c339cecade38dae11d4100cd8414ba0e6042b19a041eee63f25a8bb12c3e1ed54
   languageName: node
   linkType: hard
 
@@ -4490,7 +4490,7 @@ __metadata:
   dependencies:
     "@jest/globals": ^28.1.1
     "@jest/types": ^28.1.1
-    "@mdx-js/loader": ^2.1.1
+    "@mdx-js/loader": ^2.1.2
     "@next/bundle-analyzer": ^12.1.6
     "@next/mdx": ^12.1.6
     "@shopify/react-compose": ^3.0.1
