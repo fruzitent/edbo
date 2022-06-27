@@ -12,7 +12,7 @@
     "babel-loader": "^8.2.5",
     "cross-env": "^7.0.3",
     "destyle.css": "^3.0.2",
-    "mobx": "^6.6.0",
+    "mobx": "^6.6.1",
     "mobx-react-lite": "^3.4.0",
     "mobx-state-tree": "^5.1.5",
     "next": "^12.1.6",
