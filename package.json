@@ -3,7 +3,7 @@
     "@mdx-js/loader": "^2.1.2",
     "@next/bundle-analyzer": "^12.2.0",
     "@next/mdx": "^12.2.0",
-    "@shopify/react-compose": "^3.0.1",
+    "@shopify/react-compose": "^3.0.2",
     "@types/node": "^17.0.25",
     "@types/nprogress": "^0.2.0",
     "@types/pg": "^8",
