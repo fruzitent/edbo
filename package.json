@@ -50,7 +50,7 @@
     "jest": "^28.1.2",
     "jest-environment-jsdom": "^28.1.2",
     "jest-environment-node": "^28.1.2",
-    "jest-extended": "^3.0.0",
+    "jest-extended": "^3.0.1",
     "lint-staged": "^13.0.3",
     "next-page-tester": "^0.33.0",
     "prettier": "^2.7.1",
