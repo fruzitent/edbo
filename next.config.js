@@ -2,6 +2,7 @@ const path = require('path')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')
 const withMDX = require('@next/mdx')
+const { withAxiom } = require('next-axiom')
 const { withPlugins } = require('next-compose-plugins')
 const withPWA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
@@ -27,18 +28,20 @@ const plugins = [
   [withBundleAnalyzer({ enabled: isAnalyze })],
   [withPWA],
   [withMDX({ options: { providerImportSource: '@mdx-js/react' } })],
+  [withAxiom],
 ]
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   compiler: { reactRemoveProperties: { properties: ['^data-custom$'] } },
   devIndicators: { buildActivity: false },
+  env: {},
   eslint: { ignoreDuringBuilds: isIgnoreBuildErrors },
   experimental: {
     esmExternals: true,
     externalDir: true,
     outputFileTracingRoot: path.join(__dirname),
-    outputStandalone: true,
+    runtime: 'experimental-edge',
     swcFileReading: false,
   },
   headers: async () => [{ source: '/(.*)', headers }],

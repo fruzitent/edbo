@@ -11,22 +11,22 @@ import 'src/pages/_app.scss'
 import { ServicesContextProvider } from 'src/services'
 import { StoresContextProvider } from 'src/stores'
 
-import type { AppProps as _AppProps } from 'next/app'
+import type { AppProps } from 'next/app'
 
-export { reportWebVitals } from 'src/utils/reportWebVitals'
+export { reportWebVitals } from 'next-axiom'
 
 NProgress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', NProgress.start)
 Router.events.on('routeChangeError', NProgress.done)
 Router.events.on('routeChangeComplete', NProgress.done)
 
-type AppProps = _AppProps & {
+type NextProps = AppProps & {
   Component: {
     theme?: string
   }
 }
 
-const App = (props: AppProps) => {
+const App = (props: NextProps) => {
   const { Component, pageProps } = props
   return (
     <>
