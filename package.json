@@ -59,7 +59,7 @@
   },
   "license": "MIT",
   "name": "edbo",
-  "packageManager": "yarn@3.2.1",
+  "packageManager": "yarn@3.2.2",
   "private": true,
   "repository": {
     "type": "git",
