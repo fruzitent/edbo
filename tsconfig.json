@@ -32,5 +32,9 @@
   },
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "src/**/*", "worker/**/*"],
+  "ts-node": {
+    "transpileOnly": true,
+    "compilerOptions": { "module": "commonjs" }
+  },
   "typeAcquisition": { "enable": true }
 }
