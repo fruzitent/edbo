@@ -28,13 +28,16 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
+    "types": ["node"],
     "useDefineForClassFields": true
   },
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "src/**/*", "worker/**/*"],
   "ts-node": {
-    "transpileOnly": true,
-    "compilerOptions": { "module": "commonjs" }
+    "compilerOptions": {
+      "module": "commonjs"
+    },
+    "transpileOnly": true
   },
   "typeAcquisition": { "enable": true }
 }
