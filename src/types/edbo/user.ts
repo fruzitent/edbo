@@ -89,3 +89,16 @@ interface UserWithImageScore extends UserBase {
 }
 
 export type User = UserWithTextScore | UserWithImageScore
+
+export interface UserGenerator {
+  id: number
+  last: number
+}
+
+export interface UserRequest {
+  id: number
+  from?: number
+  to?: number
+}
+
+export type UserResponse = User[]

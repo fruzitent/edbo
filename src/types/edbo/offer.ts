@@ -1,3 +1,11 @@
+import type {
+  degree,
+  masterDegree,
+  mba,
+  qualification,
+  specialities,
+} from 'src/types/edbo/index'
+
 interface Os {
   /** */
   a?: number
@@ -11,7 +19,7 @@ interface Os {
   /** Мінімальний бал */
   mv: number
 
-  /** */
+  /** Назва предмету */
   sn: string
 }
 
@@ -66,16 +74,16 @@ export interface Offer {
   cid: 1
 
   /** Освітній рівень */
-  ebid: 40 | 620
+  ebid: keyof typeof degree
 
   /** Основа вступу */
-  ebn: 'Бакалавр' | 'Повна загальна середня освіта'
-
-  /** */
-  efid: 1 | 2
+  ebn: typeof degree[keyof typeof degree]
 
   /** Форма навчання */
-  efn: 'Денна' | 'Заочна'
+  efid: keyof typeof mba
+
+  /** Форма навчання */
+  efn: typeof mba[keyof typeof mba]
 
   /** Термін навчання */
   etrm: string
@@ -98,11 +106,11 @@ export interface Offer {
   /** */
   indid?: 105 | 108 | 109 | 111 | 150
 
-  /** */
-  mptid?: string
+  /** Тип програми магістра */
+  mptid?: keyof typeof masterDegree
 
   /** Тип програми магістра */
-  mptn?: 'Освітньо-наукова' | 'Освітньо-професійна'
+  mptn?: typeof masterDegree[keyof typeof masterDegree]
 
   /** Обсяг на контракт */
   oc?: number
@@ -122,11 +130,11 @@ export interface Offer {
   /** Вартість навчання за рік (контракт) */
   price?: string
 
-  /** */
-  qid: '1' | '2' | '6'
+  /** Кваліфікація */
+  qid: keyof typeof qualification
 
-  /** Освітній рівень */
-  qn: 'Бакалавр' | 'Магістр' | 'Молодший бакалавр'
+  /** Кваліфікація */
+  qn: typeof qualification[keyof typeof qualification]
 
   /** Рег. коефіцієнт */
   rk?: string
@@ -144,10 +152,10 @@ export interface Offer {
   spn?: string
 
   /** Cпеціальність */
-  ssc: string
+  ssc: keyof typeof specialities
 
-  /** Назва спеціальністі */
-  ssn: string
+  /** Cпеціальність */
+  ssn: typeof specialities[keyof typeof specialities]
 
   /** */
   st: Record<string, St>
@@ -180,8 +188,15 @@ export interface Offer {
   usn: string
 
   /** Вид пропозиції */
-  ustn: 'Відкрита'
+  ustn: 'Відкрита' | 'Небюджетна'
 
   /** Загальна вартість за повний термін навчання */
   xprice?: string
 }
+
+export interface OfferRequest {
+  /** comma-separated list of Offer['usid'] */
+  ids: string
+}
+
+export type OfferResponse = Offer[]
