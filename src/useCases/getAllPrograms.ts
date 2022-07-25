@@ -12,7 +12,7 @@ const main = async () => {
 
   const { errors } = await PromisePool.for(data)
     .withConcurrency(THREADS)
-    .process(async (speciality, index) => {
+    .process<void, unknown>(async (speciality, index) => {
       // @ts-ignore
       for (const program of await getPrograms({ speciality })) {
         console.log({ speciality, index })

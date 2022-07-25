@@ -30,9 +30,8 @@ export const getOffers = async (args: OfferRequest) => {
     headers: getHeaders(OFFERS_URL),
     method: 'POST',
   })
-  const data = await res.json()
-  const offers: OfferResponse = data.offers
-  return offers
+  const data: { offers: OfferResponse } = await res.json()
+  return data.offers
 }
 
 export const getPrograms = async (args: ProgramsRequest) => {
@@ -41,9 +40,8 @@ export const getPrograms = async (args: ProgramsRequest) => {
     headers: getHeaders(PROGRAMS_URL),
     method: 'POST',
   })
-  const data = await res.json()
-  const programs: ProgramsResponse = data.universities
-  return programs
+  const data: { universities: ProgramsResponse } = await res.json()
+  return data.universities
 }
 
 export const getUniversities = async (args: UniversityRequest) => {
@@ -51,8 +49,8 @@ export const getUniversities = async (args: UniversityRequest) => {
   const res = await fetch(url, {
     headers: getHeaders(UNIVERSITIES_URL),
   })
-  const universities: UniversityResponse = await res.json()
-  return universities
+  const data: UniversityResponse = await res.json()
+  return data
 }
 
 async function* _getUsers(args: UserGenerator) {
@@ -60,17 +58,17 @@ async function* _getUsers(args: UserGenerator) {
     throw new Error('index must be greater than 0')
   }
 
-  const response = await fetch(USERS_URL, {
+  const res = await fetch(USERS_URL, {
     body: buildQuery(args),
     headers: getHeaders(USERS_URL),
     method: 'POST',
   })
-  if (!response.ok) return
+  if (!res.ok) return
 
-  const body = await response.json()
-  if (Object.keys(body).length === 0) return
+  const data: { requests: UserResponse } = await res.json()
+  if (Object.keys(data).length === 0) return
 
-  const users: UserResponse = body.requests
+  const users = data.requests
   if (users.length === 0) return
 
   for (const user of users) {

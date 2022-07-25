@@ -21,7 +21,7 @@ const main = async () => {
 
   const { errors } = await PromisePool.for(data)
     .withConcurrency(THREADS)
-    .process(async (item, index) => {
+    .process<void, unknown>(async (item, index) => {
       for (const offer of await getOffers({ ids: item })) {
         console.log({ offer, index })
         await db.addOffer(offer)
