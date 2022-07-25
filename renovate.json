@@ -2,6 +2,6 @@
   "automerge": true,
   "automergeType": "branch",
   "extends": ["config:base", ":rebaseStalePrs"],
-  "major": {"automerge": false},
+  "major": { "automerge": false },
   "rangeStrategy": "bump"
 }

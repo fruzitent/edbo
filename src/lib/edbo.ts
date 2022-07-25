@@ -1,4 +1,4 @@
-import { buildQuery } from 'src/utils/utils'
+import { buildQuery } from 'edbo/src/utils/utils'
 
 import type {
   OfferRequest,
@@ -10,7 +10,7 @@ import type {
   UserGenerator,
   UserRequest,
   UserResponse,
-} from 'src/types/edbo'
+} from 'edbo/src/types/edbo'
 
 const BASE_URL = 'https://vstup2021.edbo.gov.ua'
 

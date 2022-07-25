@@ -1,7 +1,7 @@
-export * from 'src/types/edbo/offer'
-export * from 'src/types/edbo/program'
-export * from 'src/types/edbo/university'
-export * from 'src/types/edbo/user'
+export * from 'edbo/src/types/edbo/offer'
+export * from 'edbo/src/types/edbo/program'
+export * from 'edbo/src/types/edbo/university'
+export * from 'edbo/src/types/edbo/user'
 
 export const degree = {
   40: 'Бакалавр',
@@ -15,21 +15,21 @@ export const degree = {
 } as const
 
 export const exams = {
-  '1': 'Українська мова',
-  '3': 'Іноземна мова',
-  '6': 'Історія України',
-  '14': 'Математика',
-  '18': 'Біологія',
-  '19': 'Географія',
-  '21': 'Фізика',
-  '22': 'Хімія',
-  '29': 'Українська мова і література',
-  '999': 'Творчий конкурс',
+  1: 'Українська мова',
+  3: 'Іноземна мова',
+  6: 'Історія України',
+  14: 'Математика',
+  18: 'Біологія',
+  19: 'Географія',
+  21: 'Фізика',
+  22: 'Хімія',
+  29: 'Українська мова і література',
+  999: 'Творчий конкурс',
 } as const
 
 export const masterDegree = {
-  '1': 'Освітньо-професійна',
-  '2': 'Освітньо-наукова',
+  1: 'Освітньо-професійна',
+  2: 'Освітньо-наукова',
 } as const
 
 export const mba = {

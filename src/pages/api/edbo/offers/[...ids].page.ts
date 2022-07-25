@@ -1,7 +1,7 @@
-import { getOffers } from 'src/lib/edbo'
+import { getOffers } from 'edbo/src/lib/edbo'
 
+import type { OfferResponse } from 'edbo/src/types/edbo'
 import type { NextApiHandler } from 'next'
-import type { OfferResponse } from 'src/types/edbo'
 
 const handler: NextApiHandler<OfferResponse> = async (req, res) => {
   const ids = req.query.ids as string[]

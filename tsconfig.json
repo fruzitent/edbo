@@ -17,18 +17,13 @@
     "moduleResolution": "Node",
     "noEmit": true,
     "noImplicitAny": true,
-    "paths": {
-      "public/*": ["public/*"],
-      "src/*": ["src/*"],
-      "worker/*": ["worker/*"]
-    },
+    "paths": { "edbo/*": ["/*"] },
     "plugins": [],
     "preserveWatchOutput": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "types": ["node"],
     "useDefineForClassFields": true
   },
   "exclude": ["node_modules"],

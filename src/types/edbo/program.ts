@@ -1,5 +1,6 @@
-import type { regions } from 'src/types/edbo/index'
-import type { Offer } from 'src/types/edbo/offer'
+import { regions } from 'edbo/src/types/edbo'
+
+import type { Offer } from 'edbo/src/types/edbo/offer'
 
 export interface Program {
   /** comma-separated list of Конкурсна пропозиція */

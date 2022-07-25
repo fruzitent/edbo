@@ -1,15 +1,14 @@
 import compose from '@shopify/react-compose'
 import 'destyle.css'
+import 'edbo/src/pages/_app.scss'
+import { ServicesContextProvider } from 'edbo/src/services'
+import { StoresContextProvider } from 'edbo/src/stores'
 import { appWithTranslation } from 'next-i18next'
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
 import Router from 'next/router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-
-import 'src/pages/_app.scss'
-import { ServicesContextProvider } from 'src/services'
-import { StoresContextProvider } from 'src/stores'
 
 import type { AppProps } from 'next/app'
 

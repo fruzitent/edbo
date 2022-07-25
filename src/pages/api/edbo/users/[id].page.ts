@@ -1,7 +1,7 @@
-import { getUsers } from 'src/lib/edbo'
+import { getUsers } from 'edbo/src/lib/edbo'
 
+import type { UserResponse } from 'edbo/src/types/edbo'
 import type { NextApiHandler } from 'next'
-import type { UserResponse } from 'src/types/edbo'
 
 const handler: NextApiHandler<UserResponse> = async (req, res) => {
   const id = +req.query.id!

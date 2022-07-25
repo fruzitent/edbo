@@ -1,4 +1,4 @@
-import { regions } from 'src/types/edbo/index'
+import { regions } from 'edbo/src/types/edbo'
 
 export interface University {
   /** Код закладу в ЄДЕБО */
@@ -10,7 +10,7 @@ export interface University {
 
 export interface UniversityRequest {
   /** Регіон */
-  lc?: regions
+  lc?: keyof typeof regions
 
   /** Код закладу в ЄДЕБО або Назва закладу освіти */
   ns: number | string

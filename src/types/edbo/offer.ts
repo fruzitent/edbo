@@ -1,10 +1,10 @@
-import type {
+import {
   degree,
   masterDegree,
   mba,
   qualification,
   specialities,
-} from 'src/types/edbo/index'
+} from 'edbo/src/types/edbo'
 
 interface Os {
   /** */
@@ -17,7 +17,7 @@ interface Os {
   k: number
 
   /** Мінімальний бал */
-  mv: number
+  mv?: number
 
   /** Назва предмету */
   sn: string
@@ -71,7 +71,7 @@ interface St {
 
 export interface Offer {
   /** Курс зарахування */
-  cid: 1
+  cid: 1 | 2 | 3 | 4 | 5
 
   /** Освітній рівень */
   ebid: keyof typeof degree
@@ -101,22 +101,22 @@ export interface Offer {
   gz?: number
 
   /** */
-  hr: 1
-
-  /** */
   indid?: 105 | 108 | 109 | 111 | 150
 
   /** Тип програми магістра */
-  mptid?: keyof typeof masterDegree
+  mptid?: `${keyof typeof masterDegree}`
 
   /** Тип програми магістра */
   mptn?: typeof masterDegree[keyof typeof masterDegree]
+
+  /** */
+  ob?: number
 
   /** Обсяг на контракт */
   oc?: number
 
   /** Ліцензійний обсяг */
-  ol: number
+  ol?: number
 
   /** */
   os: Record<string, Os>
@@ -125,28 +125,25 @@ export interface Offer {
   osn: Record<string, Osn>
 
   /** Макс. обсяг держзамовлення */
-  ox: number
+  ox?: number
 
   /** Вартість навчання за рік (контракт) */
   price?: string
 
   /** Кваліфікація */
-  qid: keyof typeof qualification
+  qid: `${keyof typeof qualification}`
 
   /** Кваліфікація */
   qn: typeof qualification[keyof typeof qualification]
 
   /** Рег. коефіцієнт */
-  rk?: string
+  rk?: string | 1
 
   /** */
-  rr: 1
+  rr?: 1
 
   /** Термін подачі заяв */
   rtrm: string
-
-  /** */
-  shf: 0
 
   /** Освітня програма */
   spn?: string
@@ -160,10 +157,10 @@ export interface Offer {
   /** */
   st: Record<string, St>
 
-  /** */
+  /** id sus специальности */
   szc?: string
 
-  /** */
+  /** name sus специальности */
   szn?: string
 
   /** Факультет */
@@ -176,7 +173,7 @@ export interface Offer {
   un: string
 
   /** Пропозиція з пріоритетом */
-  up: 1
+  up?: 1
 
   /** Конкурсна пропозиція */
   usid: number
@@ -188,7 +185,7 @@ export interface Offer {
   usn: string
 
   /** Вид пропозиції */
-  ustn: 'Відкрита' | 'Небюджетна'
+  ustn: 'Відкрита' | 'Небюджетна' | 'Фіксована'
 
   /** Загальна вартість за повний термін навчання */
   xprice?: string
