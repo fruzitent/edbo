@@ -3,12 +3,14 @@ import 'destyle.css'
 import 'edbo/src/pages/_app.scss'
 import { ServicesContextProvider } from 'edbo/src/services'
 import { StoresContextProvider } from 'edbo/src/stores'
+import { fetcher } from 'edbo/src/utils/utils'
 import { appWithTranslation } from 'next-i18next'
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
 import Router from 'next/router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
+import { SWRConfig } from 'swr'
 
 import type { AppProps } from 'next/app'
 
@@ -43,7 +45,9 @@ const App = (props: NextProps) => {
             disableTransitionOnChange
             forcedTheme={Component.theme}
           >
-            <Component {...pageProps} />
+            <SWRConfig value={{ fetcher }}>
+              <Component {...pageProps} />
+            </SWRConfig>
           </ThemeProvider>
         </StoresContextProvider>
       </ServicesContextProvider>
