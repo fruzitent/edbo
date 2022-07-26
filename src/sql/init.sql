@@ -1,4 +1,4 @@
-CREATE DATABASE edbo ENCODING = 'UTF8';
+create database edbo encoding = 'UTF8';
 \c edbo
 
 create table edbo.public.offers

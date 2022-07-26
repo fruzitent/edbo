@@ -19,19 +19,19 @@ class Database {
 
   async addOffer(offer: Offer) {
     const sql = SQL`
-      INSERT INTO edbo.public.offers (data)
-      VALUES (${offer})
+      insert into edbo.public.offers (data)
+      values (${offer})
     `
     await this.#query(sql)
   }
 
   async getOffers(usid?: Offer['usid'][]) {
     const sql = SQL`
-      SELECT *
-      FROM edbo.public.offers
+      select *
+      from edbo.public.offers
     `
     const filter = SQL`
-      WHERE jsonb_extract_path(data, 'usid') = ANY (${usid})
+      where jsonb_extract_path(data, 'usid') = any (${usid})
     `
     if (typeof usid !== 'undefined') sql.append(filter)
     const result = await this.#query<{ data: Offer }>(sql)
@@ -40,19 +40,19 @@ class Database {
 
   async addProgram(program: Program) {
     const sql = SQL`
-      INSERT INTO edbo.public.programs (ids, n, uid, un)
-      VALUES (${program.ids}, ${program.n}, ${program.uid}, ${program.un})
+      insert into edbo.public.programs (ids, n, uid, un)
+      values (${program.ids}, ${program.n}, ${program.uid}, ${program.un})
     `
     await this.#db.query(sql)
   }
 
   async getPrograms(uids?: Program['uid'][]) {
     const sql = SQL`
-      SELECT *
-      FROM edbo.public.programs
+      select *
+      from edbo.public.programs
     `
     const filter = SQL`
-      WHERE uid = ANY(${uids})
+      where uid = any (${uids})
     `
     if (typeof uids !== 'undefined') sql.append(filter)
     const result = await this.#query<Program>(sql)
