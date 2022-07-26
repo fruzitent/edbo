@@ -1,11 +1,18 @@
 import { getOffers } from 'edbo/src/lib/edbo'
 
-import type { OfferResponse } from 'edbo/src/types/edbo'
-import type { NextApiHandler } from 'next'
+import type { OfferRequest, OfferResponse } from 'edbo/src/types/edbo'
+import type { NextApiHandler, NextApiRequest } from 'next'
+
+const getArgs = (req: NextApiRequest): OfferRequest => {
+  const ids = req.query.ids as string[]
+  return {
+    ids: ids.join(','),
+  }
+}
 
 const handler: NextApiHandler<OfferResponse> = async (req, res) => {
-  const ids = req.query.ids as string[]
-  const offers = await getOffers({ ids: ids.join(',') })
+  const args = getArgs(req)
+  const offers = await getOffers(args)
   res.status(200).json(offers)
 }
 
