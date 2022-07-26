@@ -1,7 +1,7 @@
 import { Pool, PoolConfig } from 'pg'
 import SQL, { SQLStatement } from 'sql-template-strings'
 
-import type { Offer, Program } from 'edbo/src/types/edbo'
+import type { Offer, Program, User } from 'edbo/src/types/edbo'
 
 class Database {
   #db: Pool
@@ -57,6 +57,27 @@ class Database {
     if (typeof uids !== 'undefined') sql.append(filter)
     const result = await this.#query<Program>(sql)
     return result.rows
+  }
+
+  async addUser(user: User) {
+    const sql = SQL`
+      insert into edbo.public.users (data)
+      values (${user})
+    `
+    await this.#query(sql)
+  }
+
+  async getUsers(prid?: User['prid'][]) {
+    const sql = SQL`
+      select *
+      from edbo.public.users
+    `
+    const filter = SQL`
+      where jsonb_extract_path(data, 'prid') = any (${prid})
+    `
+    if (typeof prid !== 'undefined') sql.append(filter)
+    const result = await this.#query<{ data: User }>(sql)
+    return result.rows.map((value) => value.data)
   }
 }
 

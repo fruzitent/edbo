@@ -13,3 +13,8 @@ create table edbo.public.programs
   uid numeric not null,
   un  text    not null
 );
+
+create table edbo.public.users
+(
+  data jsonb not null
+);
