@@ -1,4 +1,4 @@
-import { regions } from 'edbo/src/types/edbo'
+import { regions, specialities } from 'edbo/src/types/edbo'
 
 import type { Offer } from 'edbo/src/types/edbo/offer'
 
@@ -8,6 +8,9 @@ export interface Program {
 
   /** ids.length */
   n: number
+
+  /** */
+  speciality: keyof typeof specialities
 
   /** Код закладу в ЄДЕБО */
   uid: number

@@ -8,10 +8,11 @@ create table edbo.public.offers
 
 create table edbo.public.programs
 (
-  ids text    not null,
-  n   numeric not null,
-  uid numeric not null,
-  un  text    not null
+  ids        text    not null,
+  n          numeric not null,
+  speciality text    not null,
+  uid        numeric not null,
+  un         text    not null
 );
 
 create table edbo.public.users

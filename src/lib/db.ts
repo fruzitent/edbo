@@ -39,9 +39,10 @@ class Database {
   }
 
   async addProgram(program: Program) {
+    const { ids, n, speciality, uid, un } = program
     const sql = SQL`
-      insert into edbo.public.programs (ids, n, uid, un)
-      values (${program.ids}, ${program.n}, ${program.uid}, ${program.un})
+      insert into edbo.public.programs (ids, n, speciality, uid, un)
+      values (${ids}, ${n}, ${speciality}, ${uid}, ${un})
     `
     await this.#db.query(sql)
   }

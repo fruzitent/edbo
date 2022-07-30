@@ -1,6 +1,6 @@
 import {
-  degree,
-  masterDegree,
+  entryBasis,
+  masterProgram,
   mba,
   qualification,
   specialities,
@@ -31,7 +31,7 @@ interface Osn {
   n?: string
 }
 
-interface St {
+interface StatsFields {
   /** Допущено до конкурсу */
   a: number
 
@@ -69,15 +69,23 @@ interface St {
   t: number
 }
 
+interface StatsTitles {
+  /** Статистика заяв */
+  c?: StatsFields
+
+  /** Конкурсна пропозиція минулого року */
+  p?: StatsFields
+}
+
 export interface Offer {
   /** Курс зарахування */
   cid: 1 | 2 | 3 | 4 | 5
 
   /** Освітній рівень */
-  ebid: keyof typeof degree
+  ebid: keyof typeof entryBasis
 
   /** Основа вступу */
-  ebn: typeof degree[keyof typeof degree]
+  ebn: typeof entryBasis[keyof typeof entryBasis]
 
   /** Форма навчання */
   efid: keyof typeof mba
@@ -104,10 +112,10 @@ export interface Offer {
   indid?: 105 | 108 | 109 | 111 | 150
 
   /** Тип програми магістра */
-  mptid?: `${keyof typeof masterDegree}`
+  mptid?: `${keyof typeof masterProgram}`
 
   /** Тип програми магістра */
-  mptn?: typeof masterDegree[keyof typeof masterDegree]
+  mptn?: typeof masterProgram[keyof typeof masterProgram]
 
   /** */
   ob?: number
@@ -155,7 +163,7 @@ export interface Offer {
   ssn: typeof specialities[keyof typeof specialities]
 
   /** */
-  st: Record<string, St>
+  st: StatsTitles
 
   /** id sus специальности */
   szc?: string
@@ -185,7 +193,7 @@ export interface Offer {
   usn: string
 
   /** Вид пропозиції */
-  ustn: 'Відкрита' | 'Небюджетна' | 'Фіксована'
+  ustn: 'Відкрита' | 'Небюджетна' | 'Основна' | 'Фіксована'
 
   /** Загальна вартість за повний термін навчання */
   xprice?: string
