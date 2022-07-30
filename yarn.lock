@@ -1984,22 +1984,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shopify/react-compose@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "@shopify/react-compose@npm:3.0.2"
+"@shopify/react-compose@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "@shopify/react-compose@npm:3.0.3"
   dependencies:
-    "@shopify/useful-types": ^5.0.0
+    "@shopify/useful-types": ^5.1.0
     hoist-non-react-statics: ^3.0.1
   peerDependencies:
     react: ">=16.8.0 <19.0.0"
-  checksum: bad9f9f0f410ab341c8877b8195fefc01541c68db70c678ea47aea568b7d4599688a7a3a796c4afe3f93b397a6388b291a3fb5520c83f663993233006b9526de
+  checksum: 7772357801b7dfca6e4776b1e9af5f5a7b0de3458ff5a15757fea3900cd6e1a7cd12e6c94dbc01437524df3ed21ffdcbb243d3c15c56e242c073040ebb05d94e
   languageName: node
   linkType: hard
 
-"@shopify/useful-types@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "@shopify/useful-types@npm:5.0.0"
-  checksum: 2e709ae9b16fa120f8049c02e9cf7a8ad4a4768b0125acf6f885186df1da938c286887c966f7a4fa7bb890f76ba1b1e99ea37d81efbfcb57e9baa3a4b6978f4e
+"@shopify/useful-types@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "@shopify/useful-types@npm:5.1.0"
+  checksum: 6c4bb3afa0151a0afdd5471e8434df21ef540ea5ef904fd71359c27a3183f72f108a70743c5280043bb71f752a61b3ae6954977d050501438a60c0a465e70465
   languageName: node
   linkType: hard
 
@@ -4582,7 +4582,7 @@ __metadata:
     "@mdx-js/loader": ^2.1.2
     "@next/bundle-analyzer": ^12.2.3
     "@next/mdx": ^12.2.3
-    "@shopify/react-compose": ^3.0.2
+    "@shopify/react-compose": ^3.0.3
     "@supercharge/promise-pool": ^2.3.0
     "@testing-library/jest-dom": ^5.16.4
     "@testing-library/react": ^13.3.0
