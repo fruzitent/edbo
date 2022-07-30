@@ -1,5 +1,3 @@
-import { buildQuery } from 'edbo/src/utils/utils'
-
 import type {
   OfferRequest,
   OfferResponse,
@@ -23,6 +21,18 @@ const getHeaders = (ref: string) => ({
   'Content-Type': 'application/x-www-form-urlencoded',
   Referer: ref,
 })
+
+export const buildQuery = (args: object) => {
+  const query = new URLSearchParams()
+
+  for (const [key, value] of Object.entries(args)) {
+    if (typeof value !== 'undefined') {
+      query.set(key, `${value}`)
+    }
+  }
+
+  return query
+}
 
 export const getOffers = async (args: OfferRequest) => {
   const res = await fetch(OFFERS_URL, {

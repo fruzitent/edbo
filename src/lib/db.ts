@@ -106,6 +106,16 @@ class Database {
     const res = await this.#query(query)
     return res.map((value) => value.data)
   }
+
+  async getIds() {
+    const data: string[] = []
+    const programs = await this.getPrograms()
+    for (const program of programs) {
+      const ids = program.ids.split(',')
+      data.push(...ids)
+    }
+    return data
+  }
 }
 
 export const db = new Database(pgDsn)
