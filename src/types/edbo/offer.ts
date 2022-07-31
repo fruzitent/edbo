@@ -1,10 +1,37 @@
-import {
-  entryBasis,
-  masterProgram,
-  mba,
-  qualification,
-  specialities,
-} from 'edbo/src/types/edbo'
+import { specialities } from 'edbo/src/types/edbo'
+
+export const entryBasis = {
+  30: 'Базова загальна середня освіта',
+  40: 'Повна загальна середня освіта',
+  510: 'Кваліфікований робітник',
+  520: 'Молодший спеціаліст',
+  530: 'Фаховий молодший бакалавр',
+  610: 'Молодший бакалавр',
+  620: 'Бакалавр',
+  630: 'Спеціаліст',
+  640: 'Магістр',
+} as const
+
+export const masterProgram = {
+  1: 'Освітньо-професійна',
+  2: 'Освітньо-наукова',
+} as const
+
+export const mba = {
+  1: 'Денна',
+  2: 'Заочна',
+  4: 'Вечірня',
+  5: 'Дистанційна',
+} as const
+
+export const qualification = {
+  1: 'Бакалавр',
+  2: 'Магістр',
+  3: 'Спеціаліст',
+  4: 'Молодший спеціаліст',
+  6: 'Молодший бакалавр',
+  9: 'Фаховий молодший бакалавр',
+} as const
 
 interface Os {
   /** */
@@ -198,10 +225,3 @@ export interface Offer {
   /** Загальна вартість за повний термін навчання */
   xprice?: string
 }
-
-export interface OfferRequest {
-  /** comma-separated list of Offer['usid'] */
-  ids: string
-}
-
-export type OfferResponse = Offer[]

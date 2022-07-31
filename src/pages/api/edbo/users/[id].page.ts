@@ -1,6 +1,5 @@
-import { getUsers } from 'edbo/src/lib/edbo'
+import { getUsers, UserRequest, UserResponse } from 'edbo/src/lib/edbo'
 
-import type { UserRequest, UserResponse } from 'edbo/src/types/edbo'
 import type { NextApiHandler, NextApiRequest } from 'next'
 
 const getArgs = (req: NextApiRequest): UserRequest => {

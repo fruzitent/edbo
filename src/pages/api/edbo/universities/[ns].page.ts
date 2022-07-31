@@ -1,6 +1,9 @@
-import { getUniversities } from 'edbo/src/lib/edbo'
+import {
+  getUniversities,
+  UniversityRequest,
+  UniversityResponse,
+} from 'edbo/src/lib/edbo'
 
-import type { UniversityRequest, UniversityResponse } from 'edbo/src/types/edbo'
 import type { NextApiHandler, NextApiRequest } from 'next'
 
 const getArgs = (req: NextApiRequest): UniversityRequest => {

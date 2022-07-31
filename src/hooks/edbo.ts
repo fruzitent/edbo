@@ -1,7 +1,5 @@
-import { buildQuery } from 'edbo/src/utils/utils'
-import useSWR from 'swr'
-
-import type {
+import {
+  buildQuery,
   OfferRequest,
   OfferResponse,
   ProgramsRequest,
@@ -10,7 +8,8 @@ import type {
   UniversityResponse,
   UserRequest,
   UserResponse,
-} from 'edbo/src/types/edbo'
+} from 'edbo/src/lib/edbo'
+import useSWR from 'swr'
 
 export const useOffers = (args: OfferRequest) => {
   const ids = args.ids.split(',').join('/')

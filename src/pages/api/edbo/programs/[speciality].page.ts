@@ -1,6 +1,9 @@
-import { getPrograms } from 'edbo/src/lib/edbo'
+import {
+  getPrograms,
+  ProgramsRequest,
+  ProgramsResponse,
+} from 'edbo/src/lib/edbo'
 
-import type { ProgramsRequest, ProgramsResponse } from 'edbo/src/types/edbo'
 import type { NextApiHandler, NextApiRequest } from 'next'
 
 // prettier-ignore

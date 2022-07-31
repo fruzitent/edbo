@@ -1,6 +1,5 @@
-import { getOffers } from 'edbo/src/lib/edbo'
+import { getOffers, OfferRequest, OfferResponse } from 'edbo/src/lib/edbo'
 
-import type { OfferRequest, OfferResponse } from 'edbo/src/types/edbo'
 import type { NextApiHandler, NextApiRequest } from 'next'
 
 const getArgs = (req: NextApiRequest): OfferRequest => {

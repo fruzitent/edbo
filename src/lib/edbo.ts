@@ -1,14 +1,4 @@
-import type {
-  OfferRequest,
-  OfferResponse,
-  ProgramsRequest,
-  ProgramsResponse,
-  UniversityRequest,
-  UniversityResponse,
-  UserGenerator,
-  UserRequest,
-  UserResponse,
-} from 'edbo/src/types/edbo'
+import { Offer, Program, regions, University, User } from 'edbo/src/types/edbo'
 
 const BASE_URL = 'https://vstup2021.edbo.gov.ua'
 
@@ -34,6 +24,13 @@ export const buildQuery = (args: object) => {
   return query
 }
 
+export interface OfferRequest {
+  /** comma-separated list of Offer['usid'] */
+  ids: string
+}
+
+export type OfferResponse = Offer[]
+
 export const getOffers = async (args: OfferRequest) => {
   const res = await fetch(OFFERS_URL, {
     body: buildQuery(args),
@@ -43,6 +40,34 @@ export const getOffers = async (args: OfferRequest) => {
   const data: { offers: OfferResponse } = await res.json()
   return data.offers
 }
+
+export interface ProgramsRequest {
+  /** Курс зарахування */
+  course?: `${Offer['cid']}`
+
+  /** Освітній рівень */
+  education_base?: `${Offer['ebid']}`
+
+  /** Форма навчання */
+  education_form?: `${Offer['efid']}`
+
+  /** Кваліфікація */
+  qualification?: `${Offer['qid']}`
+
+  /** Регіон */
+  region?: keyof typeof regions
+
+  /** Cпеціальність */
+  speciality: `${Offer['ssc']}`
+
+  /** Освітня програма */
+  study_program?: `${Offer['spn']}`
+
+  /** Код закладу в ЄДЕБО */
+  university?: `${Offer['uid']}`
+}
+
+export type ProgramsResponse = Program[]
 
 export const getPrograms = async (args: ProgramsRequest) => {
   const res = await fetch(PROGRAMS_URL, {
@@ -54,6 +79,19 @@ export const getPrograms = async (args: ProgramsRequest) => {
   return data.universities
 }
 
+export interface UniversityRequest {
+  /** Регіон */
+  lc?: keyof typeof regions
+
+  /** Код закладу в ЄДЕБО або Назва закладу освіти */
+  ns: number | string
+
+  /** */
+  ut?: 0
+}
+
+export type UniversityResponse = University[]
+
 export const getUniversities = async (args: UniversityRequest) => {
   const url = `${UNIVERSITIES_URL}/?` + buildQuery(args)
   const res = await fetch(url, {
@@ -62,6 +100,19 @@ export const getUniversities = async (args: UniversityRequest) => {
   const data: UniversityResponse = await res.json()
   return data
 }
+
+export interface UserGenerator {
+  id: number
+  last: number
+}
+
+export interface UserRequest {
+  id: number
+  from?: number
+  to?: number
+}
+
+export type UserResponse = User[]
 
 async function* _getUsers(args: UserGenerator) {
   if (args.last < 0) {
